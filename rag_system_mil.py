@@ -19,8 +19,8 @@ embeddings = OpenAIEmbeddings(model="text-embedding-ada-002")
 db = milvus_vector_store
 
 # Initialize two OpenAI language models: one for RAG and one for fallback
-llm_rag = OpenAI(temperature=0.5)  # Lower temperature for more precise answers when using RAG
-llm_fallback = OpenAI(temperature=0.7)  # Higher temperature for more flexible fallback answers
+llm_rag = OpenAI(temperature=1)  # Lower temperature for more precise answers when using RAG
+llm_fallback = OpenAI(temperature=0.8)  # Higher temperature for more flexible fallback answers
 
 # Create a prompt template for RAG
 rag_prompt_template = """
